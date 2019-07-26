@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Gift Registry</title>
+    <link rel="stylesheet" type="text/css" href="static/wedding_app/css/style.css">
+  </head>
+  <body>
+    <div class="example">
+      <button class="button"><span id="demo" onclick="myFunction()">≡</span></button>
+      <div hidden id="hidden-header">
+        <p class="hidden-header"><a href="/">OUR WEDDING</a></p>
+        <p class="hidden-header"><a href="/details">DETAILS</a></p>
+        <p class="hidden-header"><a href="/accomodations">PLACES TO STAY</a></p>
+        <p class="hidden-header"><a href="/photos">PHOTOS</a></p>
+        <p class="hidden-header"><a href="/thingstodo">THINGS TO DO</a></p>
+        <p class="hidden-header"><a href="/registry">REGISTRY</a></p>
+      </div>
+    </div>
+    <div class="header">
+      <a href="/">OUR WEDDING</a>
+      <div class="dropdown">
+        <a href="/details" id="dropdown-link">DETAILS</a>
+          <div class="dropdown-content">
+            <a href="/details">Directions</a>
+            <a href="/details#rules">Venue Rules</a>
+            <a href="/rsvp">RSVP</a>
+          </div>
+      </div>
+      <a href="/accomodations">PLACES TO STAY</a>
+      <a href="photos">PHOTOS</a>
+      <a href="/thingstodo">THINGS TO DO</a>
+      <div class="dropdown">
+        <a href="/registry" id="dropdown-link">REGISTRY</a>
+          <div class="dropdown-content">
+            <a href="https://registry.theknot.com/nathan-osborne-laura-larson-october-2019-ca/35229191"><img src="static/wedding_app/img/the-knot.png" width="100%" alt=""></a>
+            <a href="https://www.target.com/gift-registry/giftgiver?registryId=cb7c0ba3ef624469babbead2ad69d37b&lnk=registry_custom_url"><img src="static/wedding_app/img/target-logo.png" width="100%" alt=""></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="wedding-info">
+      <p></p>
+      <h2 style="text-decoration: underline">Registry</h2>
+      <p>We are stoked to be getting married and are honored to have you with us at our wedding!
+        If you would like to help us get a jumpstart on a life together, we have registered for a cash fund through “theKnot.com”
+        If you would prefer a physical gift we have also registered some items through Target.</p><br>
+      <div class="reg-item">
+        <a href="https://registry.theknot.com/nathan-osborne-laura-larson-october-2019-ca/35229191"><img src="static/wedding_app/img/the-knot.png" width="60%" alt=""></a>
+        <p></p>
+      </div>
+      <div class="reg-item">
+        <a href="https://www.target.com/gift-registry/giftgiver?registryId=cb7c0ba3ef624469babbead2ad69d37b&lnk=registry_custom_url"><img src="static/wedding_app/img/target-logo.png" width="60%" alt=""></a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Created by <a href="http://jonposo.com">Jonathan Poso</a></p>
+    </div>
+
+    <script>
+    function myFunction() {
+      text = document.getElementById("demo").innerHTML;
+      console.log(text)
+        if(text=='≡') {
+          document.getElementById("demo").innerHTML = 'x'
+          document.getElementById("demo").style.marginLeft = '1px';
+          document.getElementById("hidden-header").style.display = "block"
+          x = document.getElementsByClassName("wedding-info")
+          console.log(x)
+          x[0].style.display = "none"
+          y = document.getElementsByClassName("footer")
+          y[0].style.display = "none"
+        }
+        else{
+          document.getElementById("demo").innerHTML = '≡'
+          document.getElementById("demo").style.marginLeft = '-2px';
+          document.getElementById("hidden-header").style.display = "none"
+          x = document.getElementsByClassName("wedding-info")
+          console.log(x)
+          x[0].style.display = "block"
+          y = document.getElementsByClassName("footer")
+          y[0].style.display = "block"
+        }
+    }
+    </script>
+
+  </body>
+</html>

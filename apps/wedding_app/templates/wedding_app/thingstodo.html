@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Things to Do</title>
+    <link rel="stylesheet" type="text/css" href="static/wedding_app/css/style.css">
+  </head>
+  <body>
+    <div class="example">
+      <button class="button"><span id="demo" onclick="myFunction()">≡</span></button>
+      <div hidden id="hidden-header">
+        <p class="hidden-header"><a href="/">OUR WEDDING</a></p>
+        <p class="hidden-header"><a href="/details">DETAILS</a></p>
+        <p class="hidden-header"><a href="/accomodations">PLACES TO STAY</a></p>
+        <p class="hidden-header"><a href="/photos">PHOTOS</a></p>
+        <p class="hidden-header"><a href="/thingstodo">THINGS TO DO</a></p>
+        <p class="hidden-header"><a href="/registry">REGISTRY</a></p>
+      </div>
+    </div>
+    <div class="header">
+      <a href="/">OUR WEDDING</a>
+      <div class="dropdown">
+        <a href="/details" id="dropdown-link">DETAILS</a>
+          <div class="dropdown-content">
+            <a href="/details">Directions</a>
+            <a href="/details#rules">Venue Rules</a>
+            <a href="/rsvp">RSVP</a>
+          </div>
+      </div>
+      <a href="/accomodations">PLACES TO STAY</a>
+      <a href="photos">PHOTOS</a>
+      <a href="/thingstodo">THINGS TO DO</a>
+      <div class="dropdown">
+        <a href="/registry" id="dropdown-link">REGISTRY</a>
+          <div class="dropdown-content">
+            <a href="https://registry.theknot.com/nathan-osborne-laura-larson-october-2019-ca/35229191"><img src="static/wedding_app/img/the-knot.png" width="100%" alt=""></a>
+            <a href="https://www.target.com/gift-registry/giftgiver?registryId=cb7c0ba3ef624469babbead2ad69d37b&lnk=registry_custom_url"><img src="static/wedding_app/img/target-logo.png" width="100%" alt=""></a>
+          </div>
+      </div>
+    </div>
+
+    <div class="wedding-info">
+      <h2 style="text-decoration: underline">Things to Do in Murphys</h2>
+      <p>Murphys is located in the central Sierra Nevada foothills between Lake Tahoe and Yosemite National Park, in Calaveras County, California. Rich in goldrush history, Murphys today is a vibrant, thriving community of approximately 2,000 residents, alive with art galleries and live theater, eclectic shops, fine restaurants, charming hotels and B&B’s, and a multitude of outstanding outdoor recreational opportunities all just a short drive away.</p><br>
+
+      <h3 style="text-decoration: underline">Wine Tasting</h3><br>
+      <img src="static/wedding_app/img/wine.jpg" width="80%" alt="">
+      <p>There are many, many wineries in and around Murphys, and luckily most of them have tasting rooms right on Main Street. Two of our favorites include <a href="http://vinamoda.com">Vina Moda </a>and <a href="https://www.villavallecitovineyards.com">Villa Vallecito Vineyards</a>.</p><br>
+      <!-- <a href="https://www.victoriainn-murphys.com"><button type="button" name="button">Book a Room</button></a><br><br> -->
+
+      <h3 style="text-decoration: underline">Food</h3><br>
+      <img src="static/wedding_app/img/food.jpg" width="80%" alt="">
+      <p>There are lots of great places to eat, and a wide variety of options included. Our favorites include <a href="https://murphysgrille.com">Murphys Grille</a> (try the prawns), <a href="https://vrestaurantandbar-murphys.com">V Bistro & Bar</a>, and <a href="http://www.groundsrestaurant.com">Grounds</a>. But if you happen to be in the mood for Mexican, Sushi, or Irish pub fare, Main Street has that too.</p><br>
+      <!-- <a href="https://www.victoriainn-murphys.com"><button type="button" name="button">Book a Room</button></a><br><br> -->
+
+      <h3 style="text-decoration: underline">Shops</h3><br>
+      <img src="static/wedding_app/img/shops.jpg" width="80%" alt="">
+      <p>Of course there are lots of other shops to pick from in Murphys, including many boutiques, antiques, bakeries, ice cream, and an olive oil/balsamic shop (a new favorite).</p>
+      <p>If you aren’t already staying there, check out the historic saloon and hotel in the middle of town. The rooms have been renovated upstairs, but downstairs still holds the classic feel of an old west saloon from the gold rush era. In its early years, guests included Mark Twain, Susan B. Anthony, John Wayne, and President Ulysses S. Grant.</p>
+      <p>The little park just up the street from our venue is a great place to sit and relax for a moment. You can find a playground and restrooms, and our favorite spot to read is next to the creek. </p>
+      <!-- <a href="https://www.victoriainn-murphys.com"><button type="button" name="button">Book a Room</button></a><br><br> -->
+
+      <h3 style="text-decoration: underline">Adventures</h3><br>
+      <img src="static/wedding_app/img/adventures.jpg" width="80%" alt="">
+      <p>The beautiful <a href="http://www.parks.ca.gov/?page_id=551">Calaveras Big Trees State Park</a> is just a 15 minute drive going north on Hwy 4. And surrounding Murphys are the Mercer Caverns, California Caverns, and Moaning Caverns, which offer tours and (for Moaning Caverns and the more adventurous among you) zip lining.</p><br>
+      <!-- <a href="https://www.victoriainn-murphys.com"><button type="button" name="button">Book a Room</button></a><br><br> -->
+
+    </div>
+
+    <div class="footer">
+      <p>Created by <a href="http://jonposo.com">Jonathan Poso</a></p>
+    </div>
+
+    <script>
+    function myFunction() {
+      text = document.getElementById("demo").innerHTML;
+      console.log(text)
+        if(text=='≡') {
+          document.getElementById("demo").innerHTML = 'x'
+          document.getElementById("demo").style.marginLeft = '1px';
+          document.getElementById("hidden-header").style.display = "block"
+          x = document.getElementsByClassName("wedding-info")
+          console.log(x)
+          x[0].style.display = "none"
+          y = document.getElementsByClassName("footer")
+          y[0].style.display = "none"
+        }
+        else{
+          document.getElementById("demo").innerHTML = '≡'
+          document.getElementById("demo").style.marginLeft = '-2px';
+          document.getElementById("hidden-header").style.display = "none"
+          x = document.getElementsByClassName("wedding-info")
+          console.log(x)
+          x[0].style.display = "block"
+          y = document.getElementsByClassName("footer")
+          y[0].style.display = "block"
+        }
+    }
+    </script>
+
+  </body>
+</html>

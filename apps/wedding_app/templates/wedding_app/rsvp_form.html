@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>RSVP</title>
+    <link rel="stylesheet" type="text/css" href="static/wedding_app/css/style.css">
+  </head>
+  <body>
+    <div class="example">
+      <button class="button"><span id="demo" onclick="myFunction()">≡</span></button>
+      <div hidden id="hidden-header">
+        <p class="hidden-header"><a href="/">OUR WEDDING</a></p>
+        <p class="hidden-header"><a href="/details">DETAILS</a></p>
+        <p class="hidden-header"><a href="/accomodations">PLACES TO STAY</a></p>
+        <p class="hidden-header"><a href="/photos">PHOTOS</a></p>
+        <p class="hidden-header"><a href="/thingstodo">THINGS TO DO</a></p>
+        <p class="hidden-header"><a href="/accomodations">REGISTRY</a></p>
+      </div>
+    </div>
+      <div class="header">
+        <a href="/">OUR WEDDING</a>
+        <div class="dropdown">
+          <a href="/details" id="dropdown-link">DETAILS</a>
+            <div class="dropdown-content">
+              <a href="#">Directions</a>
+              <a href="#">Venue Rules</a>
+            </div>
+        </div>
+        <a href="/accomodations">PLACES TO STAY</a>
+        <a href="/photos">PHOTOS</a>
+        <a href="/thingstodo">THINGS TO DO</a>
+        <div class="dropdown">
+          <a href="/details" id="dropdown-link">REGISTRY</a>
+            <div class="dropdown-content">
+              <a href="https://www.amazon.com"><img src="static/wedding_app/img/amazon.png" width="100%" alt=""></a>
+              <a href="https://www.bedbathandbeyond.com"><img src="static/wedding_app/img/bbb.jpg" width="100%" alt=""></a>
+              <a href="https://www.gucci.com/us/en/"><img src="static/wedding_app/img/gucci.png" width="100%" alt=""></a>
+            </div>
+        </div>
+      </div><br><br><br><br>
+
+       <div class="wedding-info">
+         <h2>{{attendee1}}</h2>
+         <p>Will be:</p>
+         <input type="radio" name="response" value="attending">Attending<br>
+         <input type="radio" name="response" value="not_attending">Not Attending<br>
+         <h2>{{attendee2}}</h2>
+         <p>Will be:</p>
+         <input type="radio" name="response" value="attending">Attending<br>
+         <input type="radio" name="response" value="not_attending">Not Attending<br>
+
+       </div>
+  </body>
+</html>
